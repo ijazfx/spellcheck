@@ -1,0 +1,13 @@
+# comment
+
+SET UTF-8
+TRY esijanrtolcdugmphbyfvkwqxzäüößáéêàâñESIJANRTOLCDUGMPHBYFVKWQXZÄÜÖÉ-.
+
+PFX U Y 1
+PFX U   0     un       .
+
+SFX F Y 4
+SFX F   0     nen        in
+SFX F   e     in         e
+SFX F   e     innen      e
+SFX F   0     in         [^i]n
