@@ -24,30 +24,6 @@ public class CompoundTree {
 		return nodeOrNull.getLeaves().size() == 0 || nodeOrNull.getEndNode() == Tree.EndBehavior.CanEnd || nodeOrNull.getEndNode() == Tree.EndBehavior.MustEnd;
 	}
 
-	//	private Tree getNodeOrNull(String rest, Tree node) {
-	//		//System.out.println("================ " + rest + " node: " + node + ", end: " + (node != null && node.getEndNode()));
-	//		if (rest.length() == 0) {
-	//			//System.out.println("-> node: " + node);
-	//			return node;
-	//		}
-	//		if (node != null && (node.getEndNode() == Tree.EndBehavior.CanEnd || node.getEndNode() == Tree.EndBehavior.MustEnd)) {
-	//			Tree nodeOrNull = getNodeOrNull(rest, suffixTree);
-	//			if (nodeOrNull != null) {
-	//				return nodeOrNull; // e.g. "Haus+tür"
-	//			} else {
-	//				return null; // e.g. "Haus+asdf"
-	//			}
-	//		}
-	//		if (node != null) {
-	//			char firstChar = rest.charAt(0);
-	//			Tree subNode = node.child(firstChar);
-	//			// keep eating the input while iterating the tree:
-	//			return getNodeOrNull(rest.substring(1), subNode);
-	//		} else {
-	//			return null;
-	//		}
-	//	}
-
 	private Tree getNodeOrNull(String rest, Tree node) {
 		if (rest.length() == 0) {
 			if (node != null && node.getEndNode() == EndBehavior.CannotEnd) {
